@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<!-- List -->
+	<bean class="com.springcore.collection.EmployeeBean" name="collection">
+	<property name="empName" value="Shubham"/>
+		<property name="empPhones">
+			<list>
+				<value>iphone</value>
+				<value>realme</value>
+				<value>samsung</value>
+				<value>radme</value>
+				<value>nokia</value>
+				<value>micromax</value>
+			</list>
+		</property>
+
+
+		<!-- Set -->
+		<property name="empAddress">
+			<set>
+				<value>jalgaon</value>
+				<value>pune</value>
+				<value>mumbai</value>
+				<value>jabalpur</value>
+				<value>indore</value>
+				<value>bhopal</value>
+			</set>
+		</property>
+
+		<!-- Map -->
+		<property name="empCource">
+			<map>
+				<entry key="b-tech" value="cse" />
+				<entry key="b-tech" value="me" />
+				<entry key="m-tech" value="ce" />
+				<entry key="b-tech" value="ftse" />
+				<entry key="m-tech" value="chemical" />
+			</map>
+		</property>
+
+	</bean>
+</beans>
