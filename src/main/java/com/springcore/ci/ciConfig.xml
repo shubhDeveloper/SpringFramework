@@ -29,5 +29,12 @@
     <bean class="com.springcore.ci.StateBean" name="states" c:state="maharastra" c:country="india" />
     <bean class="com.springcore.ci.School" name="school1" c:id="12345" c:scName="ssvm" c:scCity="indore" c:st-ref="states"/>
 
+<!-- Ambiguity Problem solution -->
+    <bean class="com.springcore.ci.Addition" name="add">
+       <constructor-arg name="a" value="1" type="int" index="0"/>
+       <constructor-arg name="b" value="1" type="int" index="1"/>
+    </bean>
+    
+ 
 
 </beans>
