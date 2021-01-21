@@ -8,11 +8,29 @@
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
 
-<bean class="com.springcore.lifecycle.Burger" name="burger" init-method="init" destroy-method="destroy">
+<context:annotation-config></context:annotation-config>
 
+<!-- Using xml -->
+
+<!-- <bean class="com.springcore.lifecycle.Burger" name="burger" init-method="init" destroy-method="destroy">
 <property name="burgerP" value="12"/>
 <property name="burgerBrand" value="KFC"/>
+</bean> -->
 
+<!-- Using Interface -->
+
+<!-- <bean class="com.springcore.lifecycle.Sandwich_inter" name="sandwich">
+<property name="sPrice" value="12"/>
+<property name="sBrand" value="sapna"/>
+</bean> -->
+
+<!-- Using Annotation -->
+
+<bean class="com.springcore.lifecycle.Pepsi_Annota" name="pepsi">
+<property name="pepPrice" value="12"/>
+<property name="pepBrand" value="Pepsi"/>
 </bean>
+
+
  
  </beans>

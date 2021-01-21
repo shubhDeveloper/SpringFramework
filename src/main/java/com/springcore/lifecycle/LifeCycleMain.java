@@ -9,12 +9,25 @@ public class LifeCycleMain {
 
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/springcore/lifecycle/lifecycleConfig.xml");
-		Burger bean = (Burger) context.getBean("burger");
-
-		System.out.println(bean);
+//		Burger bean = (Burger) context.getBean("burger");
+//		System.out.println(bean);
 		// registering shutdown hook
+//		context.registerShutdownHook();
+		
+//		-------------------------------------------------------------
+		
+		//Using interface
+//		Sandwich_inter sandwich_inter = (Sandwich_inter) context.getBean("sandwich");
+//		System.out.println(sandwich_inter);
+//		context.registerShutdownHook();
+		
+//		-------------------------------------------------------------
+		
+//		Using Annotation
+		Pepsi_Annota bean = (Pepsi_Annota) context.getBean("pepsi");
+		
+		System.out.println(bean);
 		context.registerShutdownHook();
-
 	}
 
 }
