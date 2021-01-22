@@ -1,10 +1,12 @@
 package com.springcore.autowire;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee_Bean {
 
 	@Autowired
+	@Qualifier("address1") //used to call a bean which we want
 	private Address_Bean address;
 
 	public Address_Bean getAddress() {
