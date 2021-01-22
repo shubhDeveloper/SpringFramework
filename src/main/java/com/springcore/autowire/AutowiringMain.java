@@ -8,7 +8,7 @@ public class AutowiringMain {
 	public static void main(String[] args) {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/autowire/autowireConfig.xml");
-        Employee_Bean bean = context.getBean("emp3",Employee_Bean.class);
+        Employee_Bean bean = context.getBean("emp4",Employee_Bean.class);
         
         System.out.println(bean);
 	}

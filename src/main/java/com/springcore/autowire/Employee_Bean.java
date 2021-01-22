@@ -1,7 +1,10 @@
 package com.springcore.autowire;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Employee_Bean {
 
+	@Autowired
 	private Address_Bean address;
 
 	public Address_Bean getAddress() {

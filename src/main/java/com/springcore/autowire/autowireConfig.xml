@@ -28,6 +28,9 @@
 <!-- <bean class="com.springcore.autowire.Employee_Bean" name="emp2" autowire="byType"/> -->
 
 <!-- Autowiring by constructor -->
-<bean class="com.springcore.autowire.Employee_Bean" name="emp3" autowire="constructor"/>
+<!-- <bean class="com.springcore.autowire.Employee_Bean" name="emp3" autowire="constructor"/> -->
+
+<!-- Autowiring Annotation -->
+<bean class="com.springcore.autowire.Employee_Bean" name="emp4"/>
 
  </beans>
