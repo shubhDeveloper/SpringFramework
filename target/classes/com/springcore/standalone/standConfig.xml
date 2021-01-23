@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd
+ http://www.springframework.org/schema/util
+ http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- StandAlone List -->
+	<util:list list-class="java.util.LinkedList"
+		id="mybestfriends">
+		<value>Aman</value>
+		<value>sijar</value>
+		<value>elon</value>
+		<value>jack</value>
+		<value>tom</value>
+	</util:list>
+
+	<!-- StandAlone Set -->
+	<util:set set-class="java.util.TreeSet" id="mynames">
+		<value>raju</value>
+		<value>vivan</value>
+		<value>janie</value>
+		<value>johe</value>
+		<value>larry</value>
+	</util:set>
+
+	<!-- StandAlone Map -->
+	<util:map map-class="java.util.HashMap" id="maps">
+		<entry key="btech" value="CSE" />
+		<entry key="mtech" value="fire" />
+		<entry key="commerce" value="mba" />
+		<entry key="Art" value="Law" />
+		<entry key="bsc" value="CS" />
+		<entry key="mtech" value="ME" />
+	</util:map>
+
+	<!-- Properties -->
+	<util:properties id="dbconfig">
+		<prop key="driver">com.mysql.cj.jdbc.Driver</prop>
+		<prop key="password">root</prop>
+		<prop key="gitHub">github.com/shubhDeveloper</prop>
+		<prop key="username">shubhDeveloper</prop>
+	</util:properties>
+<!-- __________________________________________________________________________________________________ -->
+
+	<!-- LinkedList -->
+	<bean class="com.springcore.standalone.Person" name="friendsList">
+		<property name="friendsList" ref="mybestfriends" />
+	</bean>
+
+	<!-- TreeSet -->
+	<bean class="com.springcore.standalone.Person" name="namesSet">
+		<property name="namesSet" ref="mynames" />
+	</bean>
+
+	<!-- HashMap -->
+	<bean class="com.springcore.standalone.Person" name="courseMap1">
+		<property name="courseMap" ref="maps" />
+	</bean>
+
+	<!-- Properties -->
+	<bean class="com.springcore.standalone.Person" name="props">
+		<property name="properties" ref="dbconfig" />
+	</bean>
+
+</beans>
