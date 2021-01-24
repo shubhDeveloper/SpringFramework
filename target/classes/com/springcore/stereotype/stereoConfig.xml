@@ -10,7 +10,17 @@
  http://www.springframework.org/schema/context/spring-context.xsd
  http://www.springframework.org/schema/util
  http://www.springframework.org/schema/util/spring-util.xsd">
- 
- <context:component-scan base-package="com.springcore.stereotype"/>
- 
- </beans>
+
+	<context:component-scan
+		base-package="com.springcore.stereotype" />
+
+	<util:list list-class="java.util.ArrayList" id="temp">
+		<value>Shujalpur</value>
+		<value>thane</value>
+		<value>bhopal</value>
+		<value>panchgini</value>
+		<value>pune</value>
+		<value>mumbai</value>
+	</util:list>
+
+</beans>

@@ -11,7 +11,10 @@ public class Test {
 		
 		student bean = context.getBean("object",student.class); //By default bean name is camel case of our bean name
 	                                                             //but we can change see bean class student  	
-  		System.out.println(bean);                
+  		
+		System.out.println(bean);                
+		System.out.println(bean.getCities());                 
+		System.out.println(bean.getCities().getClass());   //standalone collection             
 	}
 
 }
